@@ -16,7 +16,6 @@ import java.util.Date;
 import java.util.Properties;
 
 @Log4j2
-//TODO: Grouping All Tests
 public class BaseTestClass {
     public WebDriver driver;
     public Properties properties;

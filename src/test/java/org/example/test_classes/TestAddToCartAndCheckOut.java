@@ -12,7 +12,6 @@ import org.testng.annotations.Test;
 
 @Log4j2
 @SuppressWarnings("All")
-//TODO: Grouping All Tests
 public class TestAddToCartAndCheckOut extends BaseTestClass {
     private InventoryPage inventoryPage;
     private CheckOutPage checkOutPage;

@@ -9,15 +9,14 @@ import org.testng.annotations.Test;
 
 @Log4j2
 @SuppressWarnings("All")
-//TODO: Grouping All Tests
 public class TestLogin extends BaseTestClass {
-    @Test()
+    @Test(groups = {"Sanitty","Main"})
     public void testOpenPage() {
         openPage(properties.getProperty("SWAGGER_LOGIN_URL"));
         System.out.println("Inside testOpenPage");
     }
 
-    @Test(dependsOnMethods = "testOpenPage")
+    @Test(dependsOnMethods = "testOpenPage",groups = {"Sanitty","Main"})
     public void testInputCredentials() {
         System.out.println("Inside testInputCredential");
         log.info("input credential section");
@@ -28,23 +27,23 @@ public class TestLogin extends BaseTestClass {
         log.info("Successfully entered credentials");
     }
 
-    @Test(dependsOnMethods = "testInputCredentials")
+    @Test(dependsOnMethods = "testInputCredentials",groups = {"Sanitty","Main"})
     public void testVerifyLogin() {
         InventoryPage inventoryPage = new InventoryPage(driver);
         Assert.assertEquals(inventoryPage.getLabel(), "Products");
         log.info("Successfully logged in and navigated to the inventory page");
     }
-    @Test(dependsOnMethods = "testVerifyLogin")
+    @Test(dependsOnMethods = "testVerifyLogin",groups = {"Sanitty","Main"})
     public void testDemoForFailing() {
         InventoryPage inventoryPage = new InventoryPage(driver);
         Assert.assertEquals(inventoryPage.getLabel(), "Products ");
         log.error("Test failed due to incorrect label intentionally");
     }
-    @Test(dependsOnMethods = "testDemoForFailing")
+    @Test(dependsOnMethods = "testDemoForFailing",groups = {"Sanitty","Main"})
     public void testDemoForSkip() {
         log.info("This Part Never be Execute");
     }
-    @Test(dependsOnMethods = "testDemoForFailing")
+    @Test(dependsOnMethods = "testDemoForFailing",groups = {"Sanitty","Main"})
     public void testDemoForSkip2() {
         log.info("This Part Never be Execute");
     }
