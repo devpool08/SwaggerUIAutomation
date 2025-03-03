@@ -1,6 +1,6 @@
 package org.example.test_bases;
 
-import lombok.Data;
+
 import lombok.SneakyThrows;
 import lombok.extern.log4j.Log4j2;
 import org.example.utils.WebDriverFactory;
@@ -16,6 +16,7 @@ import java.util.Date;
 import java.util.Properties;
 
 @Log4j2
+//TODO: Grouping All Tests
 public class BaseTestClass {
     public WebDriver driver;
     public Properties properties;

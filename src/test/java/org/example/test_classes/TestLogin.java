@@ -9,6 +9,7 @@ import org.testng.annotations.Test;
 
 @Log4j2
 @SuppressWarnings("All")
+//TODO: Grouping All Tests
 public class TestLogin extends BaseTestClass {
     @Test()
     public void testOpenPage() {

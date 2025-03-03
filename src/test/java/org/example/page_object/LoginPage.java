@@ -25,7 +25,7 @@ public class LoginPage extends BasePage {
             log.info("im entering user name");
             wait.until(ExpectedConditions.visibilityOf(usernameInput));
             usernameInput.sendKeys(name);
-            log.info("Input username: " + usernameInput +" successful");
+            log.info("Input username: {} successful", usernameInput);
             return true;
         } catch (Exception e) {
             log.error("error encountered when entering user name");
@@ -37,7 +37,7 @@ public class LoginPage extends BasePage {
         try {
             wait.until(ExpectedConditions.visibilityOf(passwordInput));
             passwordInput.sendKeys(password);
-            log.info("Input user password: " +password +" successful");
+            log.info("Input user password: {} successful", password);
             return true;
         } catch (Exception e) {
             return false;
