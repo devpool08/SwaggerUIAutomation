@@ -1,0 +1,2 @@
+# SwaggerUIAutomation
+Automating Swagger UI
