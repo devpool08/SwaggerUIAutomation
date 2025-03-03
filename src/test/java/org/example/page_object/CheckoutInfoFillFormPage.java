@@ -11,8 +11,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 @SuppressWarnings("unused")
 public class CheckoutInfoFillFormPage extends BasePage {
 
-    public CheckoutInfoFillFormPage(WebDriver driver, WebDriverWait wait) {
-        super(driver, wait);
+    public CheckoutInfoFillFormPage(WebDriver driver) {
+        super(driver);
     }
 
     @FindBy(xpath = "//div[@class='subheader']")

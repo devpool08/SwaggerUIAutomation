@@ -11,8 +11,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 @SuppressWarnings("unused")
 public class InventoryPage extends BasePage {
-    public InventoryPage(WebDriver driver, WebDriverWait wait) {
-        super(driver, wait);
+    public InventoryPage(WebDriver driver) {
+        super(driver);
     }
 
     @FindBy(xpath = "//div[@class='product_label']")

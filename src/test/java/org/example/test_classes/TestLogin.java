@@ -20,7 +20,7 @@ public class TestLogin extends BaseTestClass {
     public void testInputCredentials() {
         System.out.println("Inside testInputCredential");
         log.info("input credential section");
-        LoginPage loginPage = new LoginPage(driver, wait);
+        LoginPage loginPage = new LoginPage(driver);
         Assert.assertTrue(loginPage.inputUserName(properties.getProperty("VALID_USER_NAME")), "Error While Entering User Name");
         Assert.assertTrue(loginPage.inputPassword(properties.getProperty("VALID_PASSWORD")), "Error While Entering Password");
         Assert.assertTrue(loginPage.clickEnter(), "Error while clicking Login Button");
@@ -29,13 +29,13 @@ public class TestLogin extends BaseTestClass {
 
     @Test(dependsOnMethods = "testInputCredentials")
     public void testVerifyLogin() {
-        InventoryPage inventoryPage = new InventoryPage(driver, wait);
+        InventoryPage inventoryPage = new InventoryPage(driver);
         Assert.assertEquals(inventoryPage.getLabel(), "Products");
         log.info("Successfully logged in and navigated to the inventory page");
     }
     @Test(dependsOnMethods = "testVerifyLogin")
     public void testDemoForFailing() {
-        InventoryPage inventoryPage = new InventoryPage(driver, wait);
+        InventoryPage inventoryPage = new InventoryPage(driver);
         Assert.assertEquals(inventoryPage.getLabel(), "Products ");
         log.error("Test failed due to incorrect label intentionally");
     }

@@ -20,7 +20,6 @@ import java.util.Properties;
 @Log4j2
 public class BaseTestClass {
     public WebDriver driver;
-    public WebDriverWait wait;
     public Properties properties;
     public FileReader reader;
     public String browserName;
@@ -30,7 +29,6 @@ public class BaseTestClass {
     @Parameters("browser")
     public void setUp(String browser) {
         driver = WebDriverFactory.getWebDriver(browser.toLowerCase());
-        this.wait = new WebDriverWait(driver, Duration.ofSeconds(8));
         properties = new Properties();
         reader = new FileReader("./src/test/resources/config.properties");
         properties.load(reader);

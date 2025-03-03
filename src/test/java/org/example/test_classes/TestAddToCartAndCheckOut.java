@@ -24,7 +24,7 @@ public class TestAddToCartAndCheckOut extends BaseTestClass {
 
     @Test(dependsOnMethods = "openInventoryPage",groups = {"Regression","Main"})
     public void sortedByPrice() {
-        inventoryPage = new InventoryPage(driver, wait);
+        inventoryPage = new InventoryPage(driver);
         Assert.assertTrue(inventoryPage.sortByPriceLowToHigh(), "Error While sorting by price");
         log.info("Sorted by price completed");
     }
@@ -49,7 +49,7 @@ public class TestAddToCartAndCheckOut extends BaseTestClass {
 
     @Test(dependsOnMethods = "checkOutItem",groups = {"Regression","Main"})
     public void completeCheckout() {
-        checkOutPage = new CheckOutPage(driver, wait);
+        checkOutPage = new CheckOutPage(driver);
         Assert.assertEquals(checkOutPage.isItemPresent(), "Sauce Labs Onesie");
         if (log.isInfoEnabled()) {
             log.info("Checkout page displayed");
@@ -64,7 +64,7 @@ public class TestAddToCartAndCheckOut extends BaseTestClass {
 
     @Test(dependsOnMethods = "clickCheckOutButton",groups = {"Regression","Main"})
     public void verifyCheckoutPage() {
-        checkoutInfoFillFormPage = new CheckoutInfoFillFormPage(driver, wait);
+        checkoutInfoFillFormPage = new CheckoutInfoFillFormPage(driver);
         Assert.assertEquals(checkoutInfoFillFormPage.isCheckoutInfoPresent(), "Checkout: Your Information");
         log.info("Checkout page displayed");
     }

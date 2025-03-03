@@ -12,8 +12,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 @SuppressWarnings("unused")
 @Log4j2
 public class LoginPage extends BasePage {
-    public LoginPage(WebDriver driver, WebDriverWait wait) {
-        super(driver, wait);
+    public LoginPage(WebDriver driver) {
+        super(driver);
     }
 
     @FindBy(xpath = "//input[@id='user-name']")

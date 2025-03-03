@@ -11,8 +11,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 @SuppressWarnings("unused")
 public class CheckOutPage extends BasePage {
 
-    public CheckOutPage(WebDriver driver, WebDriverWait wait) {
-        super(driver, wait);
+    public CheckOutPage(WebDriver driver) {
+        super(driver);
     }
 
     @FindBy(xpath = "//div[@class='inventory_item_name']")
