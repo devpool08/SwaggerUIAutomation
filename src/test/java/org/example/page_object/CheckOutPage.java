@@ -33,3 +33,4 @@ public class CheckOutPage extends BasePage {
         }
     }
 }
+

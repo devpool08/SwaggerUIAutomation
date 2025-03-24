@@ -9,15 +9,18 @@
       <option name="ignoredModules">
         <list>
           <option value="SwaggerUITest" />
+          <option value="SwaggerUITest" />
         </list>
       </option>
       <option name="ignoredPackages">
         <list>
           <option value="com.google.code.gson:gson:2.8.6" />
+          <option value="xerces:xercesImpl:2.9.1" />
         </list>
       </option>
       <option name="ignoredReasons">
         <list>
+          <option value="Not exploitable" />
           <option value="Not exploitable" />
         </list>
       </option>
