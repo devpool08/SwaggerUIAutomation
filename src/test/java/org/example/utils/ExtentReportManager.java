@@ -16,13 +16,14 @@ import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+@SuppressWarnings("all")
 public class ExtentReportManager implements ITestListener {
     /// Responsible for UI of The report like how it should look like , like theme light or dark
-    public ExtentSparkReporter sparkReporter;
+    private ExtentSparkReporter sparkReporter;
     /// Populating some common info of the report like who is performing , what is the environment , what is the browser etc
-    public ExtentReports reporter;
+    private ExtentReports reporter;
     /// Creating test for each test case entry like test status whether pass or fail or skip
-    public ExtentTest test;
+    private ExtentTest test;
 
     String reportName;
 
